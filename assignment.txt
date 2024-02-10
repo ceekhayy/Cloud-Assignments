@@ -1,0 +1,20 @@
+useradd altschool
+su altschool
+cd ~
+mkdir code tests personal misc
+cd /home/tests
+cd ./tests
+echo 'Hello A' > fileA ./misc
+touch fileB /home/misc
+cp fileA fileC
+mv fileB fileD
+tar -cvf misc.tar /home/altschool/misc
+tar -cvf misc.tar.gz /home/altschool/misc.tar
+useradd cloud
+sudo passwd --expire cloud
+sudo -l cloud
+sudo useradd -s /usr/sbin/nologin amazon
+sudo vim /etc/ssh/sshd_config
+change PasswordAuthentictaion to no
+sudo vim /etc/ssh/sshd_config
+change PermitRootLogin to no
